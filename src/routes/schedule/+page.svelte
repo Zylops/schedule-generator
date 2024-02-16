@@ -46,8 +46,8 @@
     <div class=" sm:flex justify-between items-center">
         <div>
             <a class="header" href="{PUBLIC_HEADER_URL}">
-                <img class="w-32 print:hidden block" src="{PUBLIC_HEADER}">
-                <img class="w-32 print:block hidden" src="{PUBLIC_PRINTABLE_HEADER}">
+                <img class="w-32 print:hidden block" src="{PUBLIC_HEADER}" alt="zdv.es">
+                <img class="w-32 print:block hidden" src="{PUBLIC_PRINTABLE_HEADER}" alt="zdv.es">
             </a>
             <h1 class="text-5xl font-bold mb-8">Schedule</h1>
         </div>

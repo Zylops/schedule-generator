@@ -20,7 +20,7 @@
 <main class="p-8 lg:flex justify-center items-center lg:min-h-screen lg:w-full gap-32">
     <div class="wrapper lg:w-96 text-center text-stone-400">
         <a class="header flex justify-center" href="{PUBLIC_HEADER_URL}">
-            <img class="w-32" src="{PUBLIC_HEADER}">
+            <img class="w-32" src="{PUBLIC_HEADER}" alt="zdv.es">
         </a>
         <h1 class="font-bold text-5xl">Schedule Generator</h1>
         <form class="m-4" action="/schedule">
