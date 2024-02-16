@@ -1,5 +1,6 @@
 <script>
     import { onMount } from 'svelte';
+    import { PUBLIC_HEADER, PUBLIC_PRINTABLE_HEADER, PUBLIC_HEADER_URL } from '$env/static/public'
     export let data;
     let chapters = data.chapters;
     let days = parseInt(data.days);
@@ -44,7 +45,10 @@
 <div class="portion text-zinc-400 p-8 text-center sm:text-start">
     <div class=" sm:flex justify-between items-center">
         <div>
-            <p>zdv.es</p>
+            <a class="header" href="{PUBLIC_HEADER_URL}">
+                <img class="w-32 print:hidden block" src="{PUBLIC_HEADER}">
+                <img class="w-32 print:block hidden" src="{PUBLIC_PRINTABLE_HEADER}">
+            </a>
             <h1 class="text-5xl font-bold mb-8">Schedule</h1>
         </div>
         <div class="meta sm:text-end flex sm:block justify-between">

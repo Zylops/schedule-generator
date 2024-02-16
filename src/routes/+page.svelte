@@ -1,4 +1,6 @@
 <script>
+    import { PUBLIC_HEADER, PUBLIC_HEADER_URL } from '$env/static/public'
+
     let days = 3;
     let chapters = "example.\nchapter 1\nchapter 2\nchapter 3\n...etc"
 
@@ -17,7 +19,9 @@
 
 <main class="p-8 lg:flex justify-center items-center lg:min-h-screen lg:w-full gap-32">
     <div class="wrapper lg:w-96 text-center text-stone-400">
-        <p class="text-xs">zdv.es</p>
+        <a class="header flex justify-center" href="{PUBLIC_HEADER_URL}">
+            <img class="w-32" src="{PUBLIC_HEADER}">
+        </a>
         <h1 class="font-bold text-5xl">Schedule Generator</h1>
         <form class="m-4" action="/schedule">
             <label for="days" class="text-sm ">how many days do you have:</label>
