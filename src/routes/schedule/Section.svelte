@@ -1,17 +1,30 @@
 <script>
+    import { Portion } from '$lib/Sets.js'
     import { onMount } from 'svelte';
 
     export let set, i;
     let days = parseInt(set.endOn)
     let chapters = set.content
     $: portion = [];
-
-    
     
     onMount(() => {
         // Shuffle the chapters to get a random order
         chapters.sort(() => Math.random() - 0.5);
         portion = splitArrayIntoParts(chapters, days)
+
+        portion.forEach((p) => {
+            Portion.update((ps) => {
+                let temp = ps 
+                let index = portion.indexOf(p);
+                if (temp[index] == undefined) {
+                    temp[index] = []
+                }
+                p.forEach((chapter) => {
+                    temp[index].push(chapter)
+                })
+                return temp
+            })
+        })
     })
 
     function splitArrayIntoParts(a, parts) {
@@ -38,13 +51,13 @@
 
 
 <div class="section">
-    <div class="print:block md:flex justify-start mb-4">
+    <div class="print:block md:flex justify-start my-4">
         <h1 class="print:block font-extralight inline text-center mb-4 border-b-2 border-gray-200 p-2 border-opacity-25 text-3xl">Subject {i+1}</h1>
     </div>
     <div class="sm:grid grid-cols-3 gap-16 grid-flow-cols place-content-start">
-        {#each portion as p}
+        {#each portion as p, day}
             <div class="text-start lg:mb-0 mb-8">
-                <h1 class="text-3xl font-semibold">Day {portion.indexOf(p) + 1}</h1>
+                <h1 class="text-3xl font-semibold">Day {day + 1}</h1>
                 <ul>
                     {#each p as c}
                         <li class="opacity-75">- {c}</li>

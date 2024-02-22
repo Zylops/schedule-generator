@@ -1,8 +1,9 @@
 <script>
+    import Combined from './Combined.svelte';
+
     import Section from './Section.svelte';
-    import { sets } from '$lib/Sets.js'
+    import { sets, Portion } from '$lib/Sets.js'
     import { PUBLIC_HEADER, PUBLIC_PRINTABLE_HEADER, PUBLIC_HEADER_URL } from '$env/static/public'
-    import { onMount } from 'svelte';
 
     let days = 0;
     let chapters = 0;
@@ -42,6 +43,16 @@
     </div>
     <hr class="opacity-25 mb-4">
     <br>
+    <div class="combined">
+    <div class="print:block md:flex justify-start mb-4">
+        <h1 class="print:block font-extralight inline text-center mb-4 border-b-2 border-gray-200 p-2 border-opacity-25 text-3xl">All Subjects Combined</h1>
+    </div>
+    <div class="sm:grid grid-cols-3 gap-16 grid-flow-cols place-content-start">
+        {#each $Portion as p, day}
+            <Combined {p} {day}></Combined>
+        {/each}
+    </div>
+    </div>
     {#each trimmedSets as set, i}
         <Section {set} {i}></Section>
         <br>
