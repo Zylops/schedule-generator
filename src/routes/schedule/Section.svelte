@@ -38,7 +38,7 @@
 
 
 <div class="section">
-    <div class="print:block flex justify-start">
+    <div class="print:block md:flex justify-start mb-4">
         <h1 class="print:block font-extralight inline text-center mb-4 border-b-2 border-gray-200 p-2 border-opacity-25 text-3xl">Subject {i+1}</h1>
     </div>
     <div class="sm:grid grid-cols-3 gap-16 grid-flow-cols place-content-start">

@@ -30,9 +30,9 @@
                 <textarea rows="12" class="w-full bg-stone-400 text-zinc-900 p-4" name="chapters" bind:value={s.content}></textarea>
                 <br>
             {/each}
-            <div class="actions flex justify-center gap-2 mt-4">
-                <button on:click|preventDefault={addSet} class="rounded p-3 bg-zinc-900 text-stone-400 font-bold w-full">Add Subject</button>
-                <button class="rounded p-3 bg-zinc-900 text-stone-400 font-bold w-full">Generate</button>
+            <div class="actions mt-4 flex gap-4">
+                <button on:click|preventDefault={addSet} class="rounded p-3 bg-stone-400 text-zinc-900 font-bold w-full">➕</button>
+                <button class="rounded p-3 bg-zinc-900 text-stone-400 font-bold w-full">✔</button>
             </div>
         </form>
     </div>
