@@ -31,8 +31,8 @@
                 <br>
             {/each}
             <div class="actions mt-4 flex gap-4">
-                <button on:click|preventDefault={addSet} class="rounded p-3 bg-stone-400 text-zinc-900 font-bold w-full">➕</button>
-                <button class="rounded p-3 bg-zinc-900 text-stone-400 font-bold w-full">✔</button>
+                <button on:click|preventDefault={addSet} class="rounded p-3 bg-stone-400 text-zinc-900 font-bold w-full"><p class:animate-bounce={($sets.length < 1)}>➕</p></button>
+                <button class="rounded p-3 bg-zinc-900 text-stone-400 font-bold w-full"><p class:animate-bounce={($sets.length >= 1)}>✔</p></button>
             </div>
         </form>
     </div>

@@ -43,16 +43,18 @@
     </div>
     <hr class="opacity-25 mb-4">
     <br>
+    {#if trimmedSets.length > 1}
     <div class="combined">
     <div class="print:block md:flex justify-start mb-4">
         <h1 class="print:block font-extralight inline text-center mb-4 border-b-2 border-gray-200 p-2 border-opacity-25 text-3xl">All Subjects Combined</h1>
     </div>
-    <div class="sm:grid grid-cols-3 gap-16 grid-flow-cols place-content-start">
-        {#each $Portion as p, day}
-            <Combined {p} {day}></Combined>
-        {/each}
+        <div class="sm:grid grid-cols-3 gap-16 grid-flow-cols place-content-start">
+            {#each $Portion as p, day}
+                <Combined {p} {day}></Combined>
+            {/each}
+        </div>
     </div>
-    </div>
+    {/if}
     {#each trimmedSets as set, i}
         <Section {set} {i}></Section>
         <br>
