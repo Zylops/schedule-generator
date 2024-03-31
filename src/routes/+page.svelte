@@ -11,6 +11,21 @@
 </script>
 
 <main class="p-8 flex justify-center items-center min-h-screen w-full gap-32">
+    <div class="flex justify-center bg-white">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2056079924544178"
+            crossorigin="anonymous"></script>
+        <!-- Schedule2 -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-2056079924544178"
+            data-ad-slot="2733683313"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
+
     <div class="wrapper lg:w-96 text-center text-stone-400">
         <a class="header flex justify-center" href="{PUBLIC_HEADER_URL}">
             <img class="w-32" src="{PUBLIC_HEADER}" alt="zdv.es">
@@ -35,5 +50,20 @@
                 <button class="rounded p-3 bg-zinc-900 text-stone-400 font-bold w-full"><p class:animate-bounce={($sets.length >= 1)}>✔</p></button>
             </div>
         </form>
+    </div>
+
+    <div class="ad flex justify-center bg-white">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2056079924544178"
+            crossorigin="anonymous"></script>
+        <!-- Schedule -->
+        <ins class="adsbygoogle"
+            style="display:block"
+            data-ad-client="ca-pub-2056079924544178"
+            data-ad-slot="7415164358"
+            data-ad-format="auto"
+            data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
 </main>
